@@ -14,7 +14,9 @@ The user is able to search for movies via  _keywords_ . The database will return
 
 The image below displays a snapshot of the FilmQuery Database Schema.
 
-<a href><img src="/Users/ankitshah/SD/Java/workspace/FilmQuery/src/com/skilldistillery/Filmquery/ERD/ERD.png" align="center" height="500" width="500" ></a>
+
+
+![](/Users/ankitshah/SD/Java/workspace/FilmQuery/src/com/skilldistillery/Filmquery/ERD/ERD.png?raw=true align="center" height="500" width="500")
 
 
 #### Concepts
