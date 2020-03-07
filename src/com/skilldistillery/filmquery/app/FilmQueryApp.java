@@ -34,42 +34,12 @@ public class FilmQueryApp {
 			int choice = input.nextInt();
 			switch (choice) {
 			case 1:
-				System.out.println("Enter the Film Id: ");
-				try {
-					int filmId = input.nextInt();
-					Film film = db.findFilmById(filmId);
-					if (film != null) {
-						System.out.println(film);
-
-
-					} else {
-						System.err.println("Does not exist");
-					}
-				} catch (Exception e) {
-					System.err.println("Invalid input");
-					input.next();
-					startUserInterface(input);
-				}
+				chooseFilmId(input);
 				break;
 
 			case 2:
-				System.out.print("Enter your keywords: ");
-				try {
-					String keywords = input.next();
-					List<Film> filmList = db.findFilmByKeywords(keywords);
-					if (filmList.size() > 0) {
-						for (Film film : filmList) {
-							System.out.println(film);
+				chooseFilmByKeywords(input);
 
-						}
-					} else {
-						System.err.println("Does not exist");
-					}
-				} catch (Exception e) {
-					System.err.println("Invalid input");
-					input.next();
-					startUserInterface(input);
-				}
 				break;
 			case 3:
 				System.out.println("Thank You!");
@@ -90,6 +60,46 @@ public class FilmQueryApp {
 		System.out.println("2) Look up film by keyword");
 		System.out.println("3) Quit");
 		System.out.print("Please choose: ");
+	}
+
+	private void chooseFilmId(Scanner input) {
+		System.out.print("Enter the Film Id: ");
+		try {
+			int filmId = input.nextInt();
+			Film film = db.findFilmById(filmId);
+			if (film != null) {
+				System.out.println(film);
+
+			} else {
+				System.err.println("Does not exist");
+			}
+		} catch (Exception e) {
+			System.err.println("Invalid input");
+			input.next();
+			startUserInterface(input);
+		}
+
+	}
+
+	private void chooseFilmByKeywords(Scanner input) {
+		System.out.print("Enter your keywords: ");
+		try {
+			String keywords = input.next();
+			List<Film> filmList = db.findFilmByKeywords(keywords);
+			if (filmList.size() > 0) {
+				for (Film film : filmList) {
+					System.out.println(film);
+
+				}
+			} else {
+				System.err.println("Does not exist");
+			}
+		} catch (Exception e) {
+			System.err.println("Invalid input");
+			input.next();
+			startUserInterface(input);
+		}
+
 	}
 
 }
