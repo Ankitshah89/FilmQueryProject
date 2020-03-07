@@ -16,7 +16,7 @@ The image below displays a snapshot of the FilmQuery Database Schema.
 
 
 
-![alt text](data:/Users/ankitshah/SD/Java/workspace/FilmQuery/src/com/skilldistillery/filmquery/ERD/ERD.png?raw=true)
+![alt text](https://github.com/Ankitshah89/FilmQueryProject/blob/master/src/com/skilldistillery/filmquery/ERD/ERD.png)
 
 
 #### Concepts
