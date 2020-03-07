@@ -16,13 +16,13 @@ The image below displays a snapshot of the FilmQuery Database Schema.
 
 
 
-![alt text](https://github.com/Ankitshah89/FilmQueryProject/blob/master/src/com/skilldistillery/filmquery/ERD/ERD.png)
+![alt text](https://github.com/Ankitshah89/FilmQueryProject/blob/master/src/com/skilldistillery/filmquery/ERD/ERD.png )
 
 
 #### Concepts
 
-I have 3 packages that does all of the work. There is the **database** package which consists of two classes  _DatabaseAccessor_  and  _DatabaseAccerObject_ .  _DatabaseAccessor_ is an interface and the  _DatabaseAccerObject_ is the class implementing the interface.         
-   _DatabaseAccerObject_  is where all the Java Database Connectivity (JDBC) code is encapsulated. Each methods in this class connects to the database and executes a **prepared statement** from a string SQL query. This retrieved information from the database is then used to create either a **Film** or **Actor** object.
+I have 3 packages that does all of the work. There is the **database** package which consists of two classes  _DatabaseAccessor_  and  _DatabaseAccessorObject_ .  _DatabaseAccessor_ is an interface and the  _DatabaseAccessorObject_ is the class implementing the interface.         
+   _DatabaseAccessorObject_  is where all the Java Database Connectivity (JDBC) code is encapsulated. Each methods in this class connects to the database and executes a **prepared statement** from a string SQL query. This retrieved information from the database is then used to create either a **Film** or **Actor** object.
  
  The **Film** object also contains a list of actors because there are many actors in a film.
  
