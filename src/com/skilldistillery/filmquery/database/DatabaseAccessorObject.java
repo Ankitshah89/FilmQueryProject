@@ -50,6 +50,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 				film.setRating(filmResult.getString("rating"));
 				film.setSpecialFeatures(filmResult.getString("special_features"));
 				film.setActorList(findActorsByFilmId(filmId));
+				film.setLanguage(getLanguageOfFilm(filmId));
 
 			}
 			filmResult.close();
@@ -81,7 +82,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 				actor.setId(actorResult.getInt("id"));
 				actor.setFirstName(actorResult.getString("first_name"));
 				actor.setLastName(actorResult.getString("last_name"));
-//				actor.setFilms(findFilmsByActorId(actorId)); // An Actor has Films
+//				actor.setFilms(findFilmByActorId(actorId)); // An Actor has Films
 			}
 			actorResult.close();
 			stmt.close();
@@ -182,6 +183,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 				film.setRating(filmResult.getString("rating"));
 				film.setSpecialFeatures(filmResult.getString("special_features"));
 				film.setActorList(findActorsByFilmId(film.getId()));
+				film.setLanguage(getLanguageOfFilm(film.getId()));
 				
 				listOfFilms.add(film);
 
