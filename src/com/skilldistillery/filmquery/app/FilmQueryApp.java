@@ -39,7 +39,6 @@ public class FilmQueryApp {
 
 			case 2:
 				chooseFilmByKeywords(input);
-
 				break;
 			case 3:
 				System.out.println("Thank You!");
