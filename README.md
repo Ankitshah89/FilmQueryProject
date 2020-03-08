@@ -4,7 +4,7 @@
 
 Film Query Project is a command-line application that uses Object Relational Mapping (ORM) with Java Database Connectivity to retrieve information from a database.
 
-The application allows the user to search for a film by  _id_  or  _keywords_ . Each film in the database has a unique identifier or a primary key. This application looks for the unique key ( _primary key_ ) in the **Film Query Database** and returns attributes like: _ title_ , _list of actors_ , _language_ , and other descriptions.
+The application allows the user to search for a film by  _id_  or  _keywords_ . Each film in the database has a unique identifier or a primary key. This application looks for the unique key ( _primary key_ ) in the **Film Query Database** and returns attributes like:  _title_ , _list of actors_ , _language_ , and other descriptions.
 
 If the user inputs an id that has no corresponding value in the database, it will prompt a ** Does Not Exist** and will be prompted back to the main menu.
 
