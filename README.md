@@ -21,7 +21,7 @@ The image below displays a snapshot of the FilmQuery Database Schema.
 
 #### Concepts
 
-I have 3 packages that does all of the work. There is the **database** package which consists of two classes  _DatabaseAccessor_  and  _DatabaseAccessorObject_ .  _DatabaseAccessor_ is an interface and the  _DatabaseAccessorObject_ is the class implementing the interface.         
+I have 3 packages that does all of the work. There is the **database** package which consists of two classes  _DatabaseAccessor_  and  _DatabaseAccessorObject_ .  _DatabaseAccessor_  is an interface and the  _DatabaseAccessorObject_  is the class implementing the interface.         
    _DatabaseAccessorObject_  is where all the Java Database Connectivity (JDBC) code is encapsulated. Each methods in this class connects to the database and executes a **prepared statement** from a string SQL query. This retrieved information from the database is then used to create either a **Film** or **Actor** object.
  
  The **Film** object also contains a list of actors because there are many actors in a film.
@@ -42,7 +42,7 @@ I have 3 packages that does all of the work. There is the **database** package w
 * JUnit 5
 
 #### Lessons Learned
-* I learned the use of **Prepared Statement** instead of **Statement** to prevent the SQL injection vulnerabilities. For example, if we use **Statement** with a binder and use string concatenation it might change the SQL query, which is not what we want.
+* I learned to use **Prepared Statement** instead of **Statement** to prevent the SQL injection vulnerabilities. For example, if we use **Statement** with a binder and use string concatenation it might change the SQL query, which might lead towards a result we do not want.
 * I learned how to use  build tools like **Maven** and got introduced to  _xml_  files to work on dependencies.
 * The biggest fun personally was to translate relational database information to Java Objects.
 
